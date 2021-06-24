@@ -6,12 +6,16 @@ package ttl.introkot.course._1Intro
 
 //main method.  Note Array declaration
 fun main(args: Array<String>){
-    println("Here we go args")
-    defaulter("Boo")
+//    println("Here we go with arg size of: ${args.size}")
+    callDefaulter()
 }
 
 fun process(input: Int) {
-    val result = input * 10
+    val list: List<Int> = listOf(10, 20, 30)
+    val first: Int? = list.get(0)
+
+    var result = input * 10
+
     println("result is $result")    //string interpolation
 }
 
@@ -26,7 +30,9 @@ fun defaulter(name: String, id: Int = 22, age: Int = 10) {
 }
 
 fun callDefaulter() {
-    defaulter("abc", 220)
+//    defaulter("abc")
+//    defaulter("abc", 220)
+    defaulter("abc",  age = 4000)
 }
 
 fun callWithNamedArguments() {

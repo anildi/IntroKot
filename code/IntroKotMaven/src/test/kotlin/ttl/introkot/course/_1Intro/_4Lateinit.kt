@@ -8,17 +8,18 @@ import org.junit.jupiter.api.Test
 
 
 //Vals *have* to be initialized when constructed
+//val ii: Int = 10
 
 //With vars you have an out with lateinit.
 
 //This won't compile
-//var notInitialized : String
-
+var notInitialized : String? = null
 
 lateinit var initialized: String
 
 fun lateInitVarBoom() {
     //Boom
+    println("before anything: $initialized")
     val x = initialized
     println("${initialized.length}")
 }
@@ -34,5 +35,6 @@ class LateInitTest {
     @Test
     fun main() {
         lateInitVarBoom()
+//        lateInitVar()
     }
 }
