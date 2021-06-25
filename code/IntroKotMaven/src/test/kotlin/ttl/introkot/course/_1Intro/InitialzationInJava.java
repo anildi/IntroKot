@@ -11,4 +11,11 @@ public class InitialzationInJava {
         InitialzationInJava ic = new InitialzationInJava();
 
     }
+
+    public void fun(Object obj) {
+        if(obj instanceof String) {
+            String s = (String)obj;
+            s.length();
+        }
+    }
 }

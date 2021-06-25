@@ -206,8 +206,13 @@ class TestIfAndWhen {
            is String -> obj.length
            is Int -> obj
            is Number -> Math.ceil(obj.toDouble())
+           is MyClass -> obj.prop
            else -> 0
        }
+
+    class MyClass {
+        val prop = 10
+    }
 
     @Test
     fun testSmartCastingWithWhen() {

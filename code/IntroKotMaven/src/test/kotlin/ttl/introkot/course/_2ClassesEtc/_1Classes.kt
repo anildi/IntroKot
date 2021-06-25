@@ -1,6 +1,7 @@
 package ttl.introkot.course._2ClassesEtc
 
 import org.junit.jupiter.api.Test
+import ttl.introkot.course.account.step1.Account
 
 /**
  * @author whynot

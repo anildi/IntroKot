@@ -1,6 +1,7 @@
 package ttl.introkot.course._2ClassesEtc
 
 import org.junit.jupiter.api.Test
+import ttl.introkot.course.account.step1.Account
 import kotlin.random.Random
 
 /**
@@ -13,14 +14,17 @@ class Account2(val id: Int, var balance: Double, var name: String) {
     var winsLottery: Boolean
 
     init {
-        var ri = Random.nextInt(10)
+        val ri = Random.nextInt(10)
         winsLottery = ri > 7
+    }
+
+    fun withdraw(amt: Double) {
+        balance -= amt
     }
 
     override fun toString(): String {
         return "_2Account(id=$id, balance=$balance, name='$name', winsLottery=$winsLottery)"
     }
-
 
 }
 

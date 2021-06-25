@@ -17,3 +17,16 @@ class ObjectsFromJava {
 
 }
 
+
+class MyOtherClass {
+    private int xzy;
+
+    public int getValue() {
+        return xzy;
+    }
+
+    public void setValue(int v) {
+        xzy = v;
+    }
+}
+

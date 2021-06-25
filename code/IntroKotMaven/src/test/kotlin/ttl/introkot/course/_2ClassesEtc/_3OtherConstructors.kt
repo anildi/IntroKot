@@ -10,12 +10,13 @@ import org.junit.jupiter.api.Test
  */
 //Note - You should  generally use default arguments
 // instead of many constructors.
-class Account3(var id: Int, var balance: Double, var name: String) {
+class Account3(var id: Int, var balance: Double = 0.0, var name: String = "Boo") {
 
     //Note - you *have* to call the primary constructor from here.
     // You can do other initialization in here if you want.
-    constructor(id: Int) : this(id, 0.0, "Boo") {
-    }
+//    constructor(id: Int) : this(id, 0.0, "Boo") {
+//        val i = 10
+//    }
 
     override fun toString(): String {
         return "Account(id=$id, balance=$balance, name='$name')"
@@ -31,5 +32,9 @@ class _3TestAccount {
 
         val a2 = Account3(20)
         println("$a2")
+
+//        val a3 = Account3(10, 22.3)
+
+        val a4 = Account3(10, 22.3, name = "Bob")
     }
 }

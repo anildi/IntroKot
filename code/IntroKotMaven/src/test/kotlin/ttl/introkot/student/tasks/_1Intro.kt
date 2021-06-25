@@ -78,8 +78,19 @@ class LTHolder {
     //Modify so this declaration compiles
     //val dbLoc: String
 
+    @Test
+    fun main() {
+//        initDbLoc()
+        otherStuff(dbLoc)
+    }
+
     fun initDbLoc() {
         dbLoc = "xyz.com/db"
+    }
+
+    fun otherStuff(dbloc: String) {
+       //save dbLoc for later use
+        println("dbLoc: $dbloc")
     }
 
     //TODO
