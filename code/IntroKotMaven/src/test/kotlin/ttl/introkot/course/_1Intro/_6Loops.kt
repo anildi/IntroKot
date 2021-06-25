@@ -53,15 +53,22 @@ fun collectionIteration() {
 }
 
 fun mapIteration() {
-    val map = mapOf(1 to "one", 2 to "two", 3 to "three")
+    val map: Map<Int?, String?> = mapOf(1 to "one", 2 to "two", 3 to "three")
 
     for ((key, value) in map) {
         println("$key = $value")
     }
 
     for (e in map) {
-        println("$e.key = $e.value")
+        println("${e.key} = ${e.value}")
     }
+
+    val map2: Map<String, String?> = mapOf("one" to null)
+
+    for (e in map2) {
+        println("${e.key.length} = ${e.value}")
+    }
+
 }
 
 class LoopsTest {

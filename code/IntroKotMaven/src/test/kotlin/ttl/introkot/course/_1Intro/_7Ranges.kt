@@ -100,8 +100,8 @@ class RangesTest {
     fun testRange() {
 //    testRanges('%')
 //    rangeWithWhen('#')
-//    stringRanges()
-        myRangerTest()
+    stringRanges()
+//        myRangerTest()
     }
 
     @Test

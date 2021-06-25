@@ -15,7 +15,7 @@ class Circle(val radius: Int, var x: Int, var y: Int) {
 
     val circumference: Double = 2 * Math.PI * radius
 }
-
+//Note - example of custom *and* private setter
 class CustomSet
 {
     var requestCount = 0

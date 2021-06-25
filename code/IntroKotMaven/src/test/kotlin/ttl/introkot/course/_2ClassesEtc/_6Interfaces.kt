@@ -10,7 +10,6 @@ interface Component {
     val name: String
     val coordinates: Coordinates
     fun draw()
-
 }
 
 /**

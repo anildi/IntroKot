@@ -74,19 +74,23 @@ class ClassesTasks {
     //Note - Have to 'open' the class
     open class Shape(val id: Int, val position: Position, val name: String = "") {
         //Note - have to 'open' the function to allow overriding
-        open fun draw() {
-            println("shape.draw")
+        open fun draw() : String{
+            val str = "shape.draw"
+            println(str)
+            return str
         }
     }
 
-    //TODO
-    //A Circle *is a* Shape. Remove the comments
-    //and implement it properly.
+    //TODO A Circle *is a* Shape. The 'draw' function should be
+    // overridden. Remove the comments and implement the
+    // class and method properly.
     //Note - have to call constructor of the super class
     class Circle(id: Int, position: Position, name: String = "") : Shape(id, position, name) {
         //Note - Have to add 'override'
-        override fun draw() {
-            println("circle.draw")
+        override fun draw() : String{
+            val str = "circle.draw"
+            println(str)
+            return str
         }
     }
 
@@ -144,9 +148,9 @@ class ThumbTackTests {
 
     @Test
     fun testTask4() {
-        val result = classesTasks.task4()
-        val kClass = result.javaClass.kotlin
-        assertNotNull(kClass.memberProperties.firstOrNull { it.name == "position" })
+        val shape = classesTasks.task4()
+        val result = shape.draw()
+        assertEquals("circle.draw", result)
     }
 
     //TODO - uncomment the code in this test and change

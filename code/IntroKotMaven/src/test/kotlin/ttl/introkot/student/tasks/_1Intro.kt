@@ -11,13 +11,17 @@ import org.junit.jupiter.api.Test
 
 /****************************Task 1*************************************/
 
+fun getAString(arg: Int) : String {
+    return "boo"
+}
+
 //TODO
 fun task1() : String {
     //Uncomment out the lines below and add
     //any necessary code to make them compile
 
-//    val result = getAString(10)
-//    return result
+    val result = getAString(10)
+    return result
 
     return TODO()
 }
@@ -36,18 +40,19 @@ fun task2() : String {
     //Make changes so the following code compiles.
     //Don't change the types of the arguments
 
-    //val result = someFun("ShinyThing", 22.2)
-    //return result
+    val result = someFun("ShinyThing", price=22.5)
+    return result
 
     return TODO()
 }
 
 /****************************Task 3*************************************/
 
-fun listAdder(input: List<Int>) {
-    val local = input
+fun listAdder(input: MutableList<Int>) {
+    val local: MutableList<Int> = input
     //Make changes to make this code compile
-//    local.add(10)
+    local.add(10)
+    input.add(10)
 
     return TODO()
 }
@@ -55,7 +60,12 @@ fun listAdder(input: List<Int>) {
 //TODO
 //Make changes in 'listAdder' above to make the test run successfully
 fun task3() : List<Int> {
-    val list = mutableListOf<Int>()
+
+    var list = mutableListOf<Int>()
+
+    list = mutableListOf<Int>()
+
+    list.add(10)
     listAdder(list)
     return list
 }
@@ -63,7 +73,7 @@ fun task3() : List<Int> {
 
 /****************************Task 4*************************************/
 class LTHolder {
-    var dbLoc: String = TODO() //Comment this out
+    lateinit var dbLoc: String  //= TODO() //Comment this out
     //TODO
     //Modify so this declaration compiles
     //val dbLoc: String
@@ -82,13 +92,13 @@ class LTHolder {
 }
 
 /****************************Task 5*************************************/
-val skill = ""
+var skill: String? = ""
 
 //TODO
 fun initSkill(newSkill: String?) {
     //Make this next line line work without
     //changing any other code in this function.
-    //skill = newSkill
+    skill = newSkill
 }
 
 //TODO

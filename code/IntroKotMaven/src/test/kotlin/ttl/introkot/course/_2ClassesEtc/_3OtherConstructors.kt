@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 /**
  * Secondary constructors.
  */
-//Note - You should  generally use default arguments with default arguments
+//Note - You should  generally use default arguments
 // instead of many constructors.
 class Account3(var id: Int, var balance: Double, var name: String) {
 

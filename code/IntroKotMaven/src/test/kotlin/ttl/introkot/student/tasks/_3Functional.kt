@@ -52,7 +52,20 @@ class ExtensionTasks {
             TODO()
         }
 
+        /****************************************task 3********************************************/
 
+
+        fun doSomeWork(func: (String, String) -> String): String {
+            val funcResult = func("abc", "def")
+
+            return funcResult
+        }
+
+        //TODO. Call doSomeWork with a lambda and return the result.
+        // Look at testTask3 to see what the lambda should do.
+        fun task3(): String {
+            TODO()
+        }
     }
 }
 
@@ -68,5 +81,12 @@ class TestFunctionalTasks {
     fun testTask2() {
         val result = ExtensionTasks.task2()
         assertEquals("boo", result)
+    }
+
+
+    @Test
+    fun testTask3() {
+        val result = ExtensionTasks.task3()
+        assertEquals("defabc", result)
     }
 }

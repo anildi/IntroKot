@@ -25,6 +25,8 @@ class DataClassTest {
         val p4 = PersonToo("Tanaka", 20)
         println("p3: $p3, equal: ${p3 == p4}")
 
+        println("p3: $p3, equal: ${p3 == p4}")
+
         //Destructuring. Possible because of the componentN functions.
         //The destructuring call get's converted into a call to Pair(p3.component1(), p3.component2())
         //val(name, id) = p3.component1() to p3.component2()

@@ -50,10 +50,10 @@ class InheritanceTest {
 
     fun childSpecificProperty(input: Parent) {
         input.doStuff()
-//To access Child specific properties you have to
-//cast appropriately.  Checking for instance type
-// with 'is' automatically casts input if test is true
-//This is called "Smart Casting"
+//Note - To access Child specific properties you have to
+// cast appropriately.  Checking for instance type
+// with 'is' automatically casts input if test is true.
+// This is called "Smart Casting".
         if (input is Child) {
             println("${input.balance}")
         }

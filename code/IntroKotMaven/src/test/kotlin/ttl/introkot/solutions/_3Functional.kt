@@ -2,6 +2,8 @@ package ttl.introkot.solutions
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import ttl.introkot.course._2ClassesEtc.MyClass
+import java.time.LocalDate
 
 /**
  * @author whynot
@@ -40,7 +42,7 @@ class ExtensionTasks {
         //Finish the declaration of the argTakingLambda method to take a function of the
         // same type as withManyArgs
         //Note
-        fun argTakingLambda(fn: (Int, Double, Int, String) -> String) : String{
+        fun argTakingLambda(fn: (Int, Double, Int, String) -> String): String {
             return fn(10, 22.2, 3, "handle")
         }
 
@@ -53,7 +55,23 @@ class ExtensionTasks {
 //            TODO()
         }
 
+        /****************************************task 3********************************************/
 
+
+        fun doSomeWork(func: (String, String) -> String): String {
+            val funcResult = func("abc", "def")
+
+            return funcResult
+        }
+
+        //TODO. Call doSomeWork with a lambda and return the result.
+        // Look at testTask3 to see what the lambda should do.
+        fun task3(): String {
+            val result = doSomeWork { str1, str2 ->
+                str2 + str1
+            }
+            return result
+        }
     }
 }
 
@@ -69,5 +87,11 @@ class TestFunctionalTasks {
     fun testTask2() {
         val result = ExtensionTasks.task2()
         assertEquals("boo", result)
+    }
+
+    @Test
+    fun testTask3() {
+        val result = ExtensionTasks.task3()
+        assertEquals("defabc", result)
     }
 }

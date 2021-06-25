@@ -14,8 +14,8 @@ class ClassesTasks {
 
     /*********************************************Task 1*************************************/
     //TODO Task 1
-    //You have to make this class a well implemented Kotlin class.
-    //Use all tricks you know.
+    // You have to make this class a well implemented Kotlin class.
+    // Use all tricks you know.
     class ThumbTack {
 //            val radius: Double
 //            val pinLength: Double
@@ -68,22 +68,28 @@ class ClassesTasks {
     /*********************************************Task 4*************************************/
     class Position
     class Shape(val id: Int, val position: Position, val name: String = "") {
-        fun draw() {
-            println("shape.draw")
+        fun draw(): String {
+            var str = "shape.draw"
+            println(str)
+            return str
         }
     }
 
-    //TODO
-    //A Circle *is a* Shape. Remove the comments
-    //and implement it properly.
+    //TODO A Circle *is a* Shape. The 'draw' function should be
+    // overridden. Remove the comments and implement the
+    // class and method properly.
     class Circle //: Shape {
-//            fun draw() {println("circle.draw")}
-//        }
+    fun draw() {
+//        val str = "circle.draw"
+//        println(str)
+//        return str
+//    }
+    }
 
 
     //TODO
     fun task4(): Circle {
-        //Make this code compile and run
+        //Uncomment and make this code compile and run
 //            val circle = Circle(10, Position())
 //            return circle
 
@@ -91,12 +97,12 @@ class ClassesTasks {
     }
 
     /*********************************************Task 5*************************************/
-    //TODO Uncomment the code in 'testTask5'.  Then add code to this
-    // class to make 'testTask5' succeed.
+//TODO Uncomment the code in 'testTask5'.  Then add code to this
+// class to make 'testTask5' succeed.
 
     /*********************************************Task 6*************************************/
-    //TODO - Complete the test in _2ClassesJava.java to call the 'greeting' function
-    // you wrote in Task 5
+//TODO - Complete the test in _2ClassesJava.java to call the 'greeting' function
+// you wrote in Task 5
 
 }
 
@@ -125,9 +131,11 @@ class ThumbTackTests {
 
     @Test
     fun testTask4() {
-        val result = classesTasks.task4()
-        val kClass = result.javaClass.kotlin
-        assertNotNull(kClass.memberProperties.firstOrNull { it.name == "position" })
+        val shape = classesTasks.task4()
+        //TODO - uncomment out the test code and make
+        // the test succeed
+//        val result = shape.draw()
+//        assertEquals("circle.draw", result)
     }
 
     //TODO - uncomment the code in this test and change

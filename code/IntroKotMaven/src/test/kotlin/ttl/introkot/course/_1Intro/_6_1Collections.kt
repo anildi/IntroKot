@@ -14,6 +14,7 @@ class _6_1Collections {
     fun listExamples() {
         //listOf gives you an immutable List
         val immutableList = listOf("2", "5", "15")
+        val str = immutableList[0];
 //    immutableList.add(20);   //Compile error
 
         //immutable Lists with mutableListOf
@@ -54,6 +55,9 @@ class _6_1Collections {
         mutableMap.put(50, "Fifty")
         //Or add using overridden [] operator
         mutableMap[50] = "Fifty"
+
+        var mm2 = mutableMapOf<Int, String>()
+        var mm3 = mapOf<Int, String>()
     }
 
 }

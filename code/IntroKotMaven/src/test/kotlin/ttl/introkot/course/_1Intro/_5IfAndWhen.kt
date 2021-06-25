@@ -7,13 +7,13 @@ import java.time.LocalTime
 
 
 class TestIfAndWhen {
-    enum class Grade {
-        A, B, C
-    }
+
+    val xyz: Int = 10
 
     fun processScoresIf(score: Double): Pair<String, Grade> {
         val description: String
         val grade: Grade
+
         if (score >= 90.0) {
             description = "Excellent"
             grade = Grade.A
@@ -89,14 +89,30 @@ class TestIfAndWhen {
     }
 
     fun updateScore(score: Double): Pair<String, Grade> {
-        val pair =
-                when {
-                    score >= 90.0 -> Pair("Excellent", Grade.A)
-                    score in 70.0..89.9 -> Pair("Good", Grade.B)
-                    else -> Pair("Acceptable", Grade.C)
-                }
-        return pair
+        return when {
+            score >= 90.0 -> Pair("Excellent", Grade.A)
+            score in 70.0..89.9 -> Pair("Good", Grade.B)
+            else -> {
+                Pair("Acceptable", Grade.C)
+            }
+        }
+
+//        println("here we are")
+//
+//        //Use the pair
+//        //other code
+//
+//        return pair
     }
+
+    fun updateScore2(score: Double): Pair<String, Grade> =
+            when {
+                score >= 90.0 -> Pair("Excellent", Grade.A)
+                score in 70.0..89.9 -> Pair("Good", Grade.B)
+                else -> {
+                    Pair("Acceptable", Grade.C)
+                }
+            }
 
     @Test
     fun testUpdateScores() {
@@ -118,11 +134,12 @@ class TestIfAndWhen {
         assertEquals(Grade.C, p.second);
     }
 
-//When with a variable
 
     //Using an Enum in a if/vs when.
-//With an if, you have to provide an 'else'
-//clause, or the code below won't compile.
+
+    //With an if, you have to provide an 'else'
+    //clause, or the code below won't compile.
+    //Also shows the use of 'if' as an expression
     fun aVarWithIf(grade: Grade): String {
         val result = if (grade == Grade.A) {
             "Excellent"
@@ -130,7 +147,8 @@ class TestIfAndWhen {
             "Good"
         } else if (grade == Grade.C) {
             "Acceptable"
-        } else {
+        }
+        else {
             throw UnsupportedOperationException("Unknown Grade: $grade")
         }
         return result
@@ -146,6 +164,10 @@ class TestIfAndWhen {
 
         p = aVarWithIf(Grade.C)
         assertEquals("Acceptable", p);
+    }
+
+    enum class Grade {
+        A, B, C
     }
 
     //No 'else' required if you use a 'when'
