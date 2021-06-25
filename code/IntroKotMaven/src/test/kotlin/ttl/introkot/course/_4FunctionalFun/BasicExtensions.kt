@@ -16,14 +16,17 @@ fun Person.fullName() : String {
 fun Person.fullNameAlso() : String = "$firstName $lastName"
 
 fun String.randomize() : String {
-    var list = this.toMutableList()
-    list.shuffle()
 
-    val a: Array<Char> = list.toTypedArray()
+    //Get the char array for the String
+    val array2 = this.toCharArray()
+    //Shuffle that
+    array2.shuffle()
+    //And back to a new String
+    val ns = String(array2)
 
-    val array: CharArray = list.toTypedArray().toCharArray()
-    val ns = String(array)
     return ns
+
+
 }
 
 
@@ -31,12 +34,12 @@ class BasicExtensionTest {
     @Test
     fun basicTest() {
         val p = Person("Joe", "Smith")
-        println("${p.firstName} ${p.lastName}")
+        println("first and last: ${p.firstName} ${p.lastName}")
 
-        println(p.fullName())
+        println("fullName: ${p.fullName()}")
 
         val s = p.fullName().randomize()
 
-        println(s)
+        println("randomized: $s")
     }
 }

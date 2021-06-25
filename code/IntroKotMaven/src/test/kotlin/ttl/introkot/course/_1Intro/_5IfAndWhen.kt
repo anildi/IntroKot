@@ -200,4 +200,24 @@ class TestIfAndWhen {
         p = aVarWithIf(Grade.C)
         assertEquals("Acceptable", p);
     }
+
+    fun smartCastingWithWhen(obj: Any) =
+       when(obj) {
+           is String -> obj.length
+           is Int -> obj
+           is Number -> Math.ceil(obj.toDouble())
+           else -> 0
+       }
+
+    @Test
+    fun testSmartCastingWithWhen() {
+        val r1 = smartCastingWithWhen(22)
+        assertEquals(22, r1)
+
+        val r2 = smartCastingWithWhen("abcde")
+        assertEquals(5, r2)
+
+        val r3 = smartCastingWithWhen(22.7)
+        assertEquals(23.0, r3)
+    }
 }

@@ -15,7 +15,7 @@ class LambdaWithReceiver {
     val s1 = lengthSquared("hello")
     val s2 = "hello".lengthSquaredWithReceiver()
 
-    fun builder1() : String {
+    fun awfulBuilder() : String {
         val sb1 = StringBuilder()
         sb1.append("The")
         sb1.append("Way")
@@ -26,19 +26,8 @@ class LambdaWithReceiver {
         return sb1.toString()
     }
 
-    fun builder2() : String {
-        val sb1 = StringBuilder().apply {
-            append("The")
-            append("Way")
-            append("The")
-            append("Cookie")
-            append("Crumbles")
-        }
 
-        return sb1.toString()
-    }
-
-    fun builder3() : String {
+    fun betterBuilder() : String {
         val str = buildString {
             append("The")
             append("Way")
@@ -50,13 +39,14 @@ class LambdaWithReceiver {
         return str
     }
 
-    fun builder4() = buildString {
+    fun builderWithCleanedUpSyntax() = buildString {
             append("The")
             append("Way")
             append("The")
             append("Cookie")
             append("Crumbles")
         }
+
 
     fun buildString(init: (StringBuilder.() -> Unit)) : String {
         val sb = StringBuilder()
@@ -76,6 +66,18 @@ class LambdaWithReceiver {
         }
 
         println("str: $str")
+    }
+
+    fun builderWithApply() : String {
+        val sb1 = StringBuilder().apply {
+            append("The")
+            append("Way")
+            append("The")
+            append("Cookie")
+            append("Crumbles")
+        }
+
+        return sb1.toString()
     }
 }
 

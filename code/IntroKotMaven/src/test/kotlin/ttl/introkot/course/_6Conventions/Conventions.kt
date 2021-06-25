@@ -28,7 +28,7 @@ class ConventionsInCollections
 {
     @Test
     fun listOperators() {
-        val list = mutableListOf(10, 20, 30, 40)
+        var list = mutableListOf(10, 20, 30, 40)
         //access element with []
         val first = list[0]
         list[0] = 25
@@ -39,9 +39,35 @@ class ConventionsInCollections
         list -= 20 //remove the first 20 from the list
         println("second print: $list")
 
+        //Remove all elements from second list
         val otherList = listOf(30, 50, 70)
         list -= otherList  //remove all elements in otherList that are in list
         println("third print: $list")
+
+        //create a new list by using the + operator.
+        //You can't say list = list + 200
+        val yetAnotherList = list + 500
+        println("fourth Print: $yetAnotherList")
+
+
+    }
+
+    @Test
+    fun mapOperators() {
+        val mutMap = mutableMapOf(10 to "Ten", 20 to "Twenty", 30 to "Thirty")
+
+        mutMap += 40 to "Forty"
+        println("added Forty, mutMap: $mutMap")
+
+        mutMap -= 10
+        println("removed 10, mutMap: $mutMap")
+
+        mutMap[20] = "veinte"
+        println("changed 20 to Spanish, mutMap: $mutMap")
+
+        val num = 30
+        val label = mutMap[30]
+        println("label for 30 is $label")
     }
 
 }

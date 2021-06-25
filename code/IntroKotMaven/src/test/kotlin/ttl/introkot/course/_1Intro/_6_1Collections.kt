@@ -41,7 +41,7 @@ class _6_1Collections {
         //Key Value pair
         val immutableMap = mapOf(Pair(10, "Ten"), Pair(20, "Twenty"), Pair(30, "Thirty"))
         //A different way to make Pairs
-        val immutableMap2 = mapOf(10 to "Ten", 20 to "Twenty", 30 to "Thirty")
+        val immutableMap2 = mapOf(10 to "Ten", 20.to("Twenty"), 30 to "Thirty")
 //        immutableMap.put(50, "Fifty")   //Compile Error
 
         //Get using .get
