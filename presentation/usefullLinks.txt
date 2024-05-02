@@ -1,0 +1,8 @@
+- New Language Features in Kotlin 1.4 by Svetlana Isakova
+  https://www.youtube.com/watch?v=9ihevvUCoG0
+
+- Shoulders of Giants: Languages Kotlin learned from | Andrey Breslav @ Kotlin Dev Day Amsterdam
+  Excellent talk by on of the original Kotlin language designers on how they made
+  design choices when creating the language.
+
+  https://www.youtube.com/watch?v=7z_K-hTTeqI&list=PLC3RVtNPazW_0dUJmRRjfqQfH57BGlBaI&index=17
