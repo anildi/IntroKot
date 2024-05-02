@@ -7,20 +7,27 @@ import java.util.concurrent.atomic.AtomicInteger
  * @author whynot
  */
 
+//val someString = "";
 //won't compile
-//var nullInitialized: String
+//var nullInitialized: String = ""
 //won't compile
 //var nullInitialized: String = null
 
-var nullInitialized: String? = null
+var nullInitialized: String? = "abc" //null
+
+var notNullString: String = "abc"
 
 fun useVar(input: String?) {
-    if (input != null) {
-        //Smart cast
-        println("${input.length}")
-    }
-
-    input?.length
+//    val length = nullInitialized.length
+//
+//    if (input != null) {
+//        //Smart cast
+//        println("${input.length}")
+//    } else {
+//        println("null")
+//    }
+//
+    println(input?.length)
 }
 
 //Can use the null check operator and/or
@@ -32,10 +39,6 @@ fun checkNulls(input: String?) {
 //    }else {
 //        null
 //    }
-
-    val l2 = input?.let {
-        input.length
-    }
 
     //Case 2
 //    val l3 = if(input != null) {
@@ -62,7 +65,9 @@ fun checkNulls(input: String?) {
 
 class TestNullNess {
     @Test
-    fun main() {
-        useVar(nullInitialized)
+    fun testNullInitialized() {
+        //useVar(nullInitialized)
+//        useVar("abc")
+        checkNulls("abc")
     }
 }

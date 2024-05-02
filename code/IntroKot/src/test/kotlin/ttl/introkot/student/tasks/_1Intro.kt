@@ -122,11 +122,6 @@ class WHolder {
     }
 }
 
-/****************************Task 7*************************************/
-//TODO - No tests for this one.
-//TODO Write a function that will print out all numbers between two
-// limits (specified by arguments) that are divisible by either 3 or 7
-
 /****************************End Tasks*************************************/
 
 
